@@ -12,6 +12,10 @@ venv/
 .venv/
 env/
 ENV/
+evenv/
+.evenv/
+testenv/
+.testenv/
 
 # ==========================
 # Python

@@ -1,3 +1,24 @@
-langchain
-ipykernel
-python-dotenv
+# Core LangChain
+langchain==0.3.27
+langchain-community==0.3.27
+langchain-core==0.3.86
+langchain-text-splitters==0.3.11
+
+# Document Loaders dependencies
+pypdf==6.14.2                  # PDF loading (PyPDFLoader)
+pymupdf==1.28.0                # PDF parsing for ArxivLoader (fitz)
+arxiv==2.2.0                   # ArxivLoader backend
+wikipedia==1.4.0               # WikipediaLoader backend
+beautifulsoup4==4.15.0         # WebBaseLoader HTML parsing
+lxml==6.1.1                    # lxml parser for BeautifulSoup
+
+# SSL fix (required on Windows — points urllib to system/certifi certs)
+certifi==2026.6.17
+pip-system-certs==5.3
+
+# Environment & Jupyter
+python-dotenv==1.2.2
+ipykernel==7.3.0
+
+# Utility (bs4 is a stub that installs beautifulsoup4, kept for compatibility)
+bs4==0.0.2
