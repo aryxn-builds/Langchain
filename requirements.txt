@@ -21,4 +21,14 @@ python-dotenv==1.2.2
 ipykernel==7.3.0
 
 # Utility (bs4 is a stub that installs beautifulsoup4, kept for compatibility)
-bs4==0.0.2
+bs4==0.0.2
+
+
+langchain-openai
+chromadb
+sentence_transformers
+langchain_huggingface
+faiss-cpu
+langchain_chroma
+duckdb
+pandas
