@@ -1,49 +1,48 @@
-# Core LangChain
+# Core LangChain Framework
 langchain==0.3.27
 langchain-community==0.3.27
 langchain-core==0.3.86
 langchain-text-splitters==0.3.11
 
-# Document Loaders dependencies
+# Provider & Model Integrations
+langchain-openai==0.3.35
+openai==2.47.0
+langchain-huggingface==0.3.1
+huggingface-hub==1.24.0
+sentence-transformers==5.6.0
+langchain-groq==0.3.8
+
+# Vector Stores & Retrieval
+faiss-cpu==1.14.3
+langchain-chroma==0.2.6
+chromadb==1.5.9
+
+# Document Loaders & Data Parsing
 pypdf==6.14.2                  # PDF loading (PyPDFLoader)
 pymupdf==1.28.0                # PDF parsing for ArxivLoader (fitz)
 arxiv==2.2.0                   # ArxivLoader backend
 wikipedia==1.4.0               # WikipediaLoader backend
-beautifulsoup4==4.15.0         # WebBaseLoader HTML parsing
+beautifulsoup4==4.15.0         # WebBaseLoader & HTML parsing
 lxml==6.1.1                    # lxml parser for BeautifulSoup
+youtube-transcript-api==1.2.4   # YouTube transcript loader
+unstructured==0.24.1           # Unstructured document loader
+pytube==15.0.0                 # PyTube loader
 
-# SSL fix (required on Windows — points urllib to system/certifi certs)
-certifi==2026.6.17
-pip-system-certs==5.3
+# Data Processing & Databases
+pandas==3.0.5
+duckdb==1.5.5
+SQLAlchemy==2.0.51
+mysql-connector-python==9.7.0
 
-# Environment & Jupyter
+# Utilities, Web & Search Tools
+requests==2.32.5
+duckduckgo-search==5.3.1b1
+validators==0.28.1
+numexpr==2.14.2
+bs4==0.0.2                     # Stub compatibility package for beautifulsoup4
+
+# Environment, SSL & Jupyter Execution
 python-dotenv==1.2.2
 ipykernel==7.3.0
-
-# Utility (bs4 is a stub that installs beautifulsoup4, kept for compatibility)
-bs4==0.0.2
-
-
-langchain-openai
-chromadb
-sentence_transformers
-langchain_huggingface
-faiss-cpu
-langchain_chroma
-duckdb
-pandas
-
-openai
-langchain-groq
-duckduckgo_search==5.3.1b1
-pymupdf
-arxiv
-wikipedia
-mysql-connector-python
-SQLAlchemy
-validators==0.28.1
-youtube_transcript_api
-unstructured
-pytube
-numexpr
-huggingface_hub
+certifi==2026.6.17             # Windows SSL certificate fix
+pip-system-certs==5.3          # Windows system certs integration
